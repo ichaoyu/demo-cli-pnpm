@@ -1,0 +1,19 @@
+{
+  "name": "@demo-cli-pnpm/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "libs/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "npminstall": "^7.12.0",
+    "npmlog": "^7.0.1",
+    "semver": "^7.6.0",
+    "url-join": "^5.0.0"
+  }
+}
