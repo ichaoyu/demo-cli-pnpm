@@ -1,6 +1,6 @@
 {
   "name": "@demo-cli-pnpm/core",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "bin/index.js",
   "bin": {
@@ -8,6 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "author": "",
