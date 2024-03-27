@@ -2,10 +2,19 @@
   "name": "demo-cli-pnpm",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "release": "run-s build releaseOnly",
-    "releaseOnly": "changeset publish"
+    "build": "pnpm -r --filter ./packages run build",
+    "changeset": "changeset",
+    "vp": "changeset version",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "release:alpha":"changeset pre enter alpha",
+    "release:beta":"changeset pre enter beta",
+    "release:rc":"changeset pre enter rc"
+
+
   },
   "keywords": [],
   "author": "",
