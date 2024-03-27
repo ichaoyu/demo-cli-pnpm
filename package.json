@@ -5,21 +5,24 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "pnpm -r --filter ./packages run build",
+    "commit": "cz",
     "changeset": "changeset",
     "vp": "changeset version",
     "release": "pnpm build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
-    "release:alpha":"changeset pre enter alpha",
-    "release:beta":"changeset pre enter beta",
-    "release:rc":"changeset pre enter rc"
-
-
+    "release:alpha": "changeset pre enter alpha",
+    "release:beta": "changeset pre enter beta",
+    "release:rc": "changeset pre enter rc",
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.27.1"
+    "@changesets/cli": "^2.27.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0"
   }
 }
