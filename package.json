@@ -15,12 +15,16 @@
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "release:alpha": "changeset pre enter alpha",
     "release:beta": "changeset pre enter beta",
-    "release:rc": "changeset pre enter rc",
-    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules"
+    "release:rc": "changeset pre enter rc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.1",
